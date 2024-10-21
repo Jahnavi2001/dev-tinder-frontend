@@ -43,7 +43,6 @@ const EditProfile = ({ user }) => {
       setTimeout(() => {
         setShowToast(false);
       }, 3000);
-
     } catch (err) {
       setError(err?.response?.data);
     }
@@ -127,7 +126,9 @@ const EditProfile = ({ user }) => {
               />
             </label>
 
-            <div className="text-red-500 mt-2">{error}</div>
+            <div className="text-red-500 mt-2 text-ellipsis overflow-hidden">
+              {error}
+            </div>
 
             <div>
               <button
