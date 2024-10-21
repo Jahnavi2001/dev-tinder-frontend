@@ -24,6 +24,22 @@
 - Navbar should update as soon as user logins
 - Refactor our code to add constants file + create a component folder
 
+<!-- Episode 03 -->
+- You should not be able to access other routes without login
+- If token is not present, redirect user to login page
+- Logout Feature
+- Get the feed and add the feed in the store
+- Build the user card on the feed
+- Edit profile feature
+- Show toast message on save of profile
+- New Page - See all my connections
+- New Page - See all my connection requests
+- Feature - Accept/Reject connection request
+
+Remaining:
+- Send/Ignore the user card from the feed
+- Signup New User
+- E2E Testing
 
 
 Body
