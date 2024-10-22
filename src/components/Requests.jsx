@@ -62,7 +62,7 @@ const Requests = () => {
               <div>
                 <img
                   src={photoUrl}
-                  className="w-20 h-20 object-cover rounded-lg"
+                  className="h-20 object-cover rounded-lg max-w-20 min-w-20"
                 />
               </div>
               <div className="text-left flex flex-col gap-1">
