@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-unused-vars */
 import axios from "axios";
 import UserCard from "./UserCard";
@@ -25,6 +26,13 @@ const Feed = () => {
   useEffect(() => {
     getFeed();
   }, []);
+
+  if (!feed || feed.length <= 0)
+    return (
+      <h1 className="text-center text-xl font-bold my-10">
+        No New Users Found !!
+      </h1>
+    );
 
   return (
     feed && (
