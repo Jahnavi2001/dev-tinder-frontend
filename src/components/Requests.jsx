@@ -17,11 +17,11 @@ const Requests = () => {
       });
       dispatch(addRequests(res?.data?.data));
     } catch (err) {
-      console.log("err", err);
+      console.error(err)
     }
   };
 
-  const handleClickRequest = async (action, _id) => {
+  const reviewRequest = async (action, _id) => {
     try {
       await axios.post(
         BASE_URL + "/request/review/" + action + "/" + _id,
@@ -32,7 +32,7 @@ const Requests = () => {
       );
       dispatch(removeRequest({ _id }));
     } catch (err) {
-      console.log("err", err);
+      console.error(err)
     }
   };
 
@@ -72,13 +72,13 @@ const Requests = () => {
                 <div className="flex gap-4">
                   <button
                     className="btn btn-primary btn-sm"
-                    onClick={() => handleClickRequest("rejected", request._id)}
+                    onClick={() => reviewRequest("rejected", request._id)}
                   >
                     Reject
                   </button>
                   <button
                     className="btn btn-secondary btn-sm"
-                    onClick={() => handleClickRequest("accepted", request._id)}
+                    onClick={() => reviewRequest("accepted", request._id)}
                   >
                     Accept
                   </button>

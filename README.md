@@ -32,16 +32,18 @@
 - Build the user card on the feed
 - Edit profile feature
 - Show toast message on save of profile
-- New Page - See all my connections
+
+<!-- Episode 04 -->
+- New Page - See all my existing connections
 - New Page - See all my connection requests
 - Feature - Accept/Reject connection request
 
-Remaining:
-- Send/Ignore the user card from the feed
+<!-- Episode 05 -->
+- Send Interest/Ignore the user card from the feed
 - Signup New User
 - E2E Testing
 
-
+<!-- Routes -->
 Body
   NavBar
     Route=/  => Feed

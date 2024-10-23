@@ -3,12 +3,12 @@
 import axios from "axios";
 import { BASE_URL } from "../utils/constants";
 import { useDispatch } from "react-redux";
-import { removeFeed } from "../utils/feedSlice";
+import { removeUserFromFeed } from "../utils/feedSlice";
 
 const UserCard = ({ user }) => {
   const dispatch = useDispatch();
 
-  const handleActionClick = async (status, userId) => {
+  const handleSendRequest = async (status, userId) => {
     await axios.post(
       BASE_URL + "/request/send/" + status + "/" + userId,
       {},
@@ -17,7 +17,7 @@ const UserCard = ({ user }) => {
       }
     );
     dispatch(
-      removeFeed({
+      removeUserFromFeed({
         _id: userId,
       })
     );
@@ -36,13 +36,13 @@ const UserCard = ({ user }) => {
         <div className="card-actions justify-center flex gap-6 mt-6">
           <button
             className="btn btn-primary w-32"
-            onClick={() => handleActionClick("ignored", _id)}
+            onClick={() => handleSendRequest("ignored", _id)}
           >
             Ignore
           </button>
           <button
             className="btn btn-secondary w-32"
-            onClick={() => handleActionClick("interested", _id)}
+            onClick={() => handleSendRequest("interested", _id)}
           >
             Interested
           </button>
